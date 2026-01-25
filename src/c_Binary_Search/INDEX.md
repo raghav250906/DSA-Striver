@@ -1,0 +1,34 @@
+## 🔍 Binary Search
+
+- Solution_62 → Binary Search to Find X in Sorted Array
+- Solution_63 → Implement Lower Bound
+- Solution_64 → Implement Upper Bound
+- Solution_65 → Search Insert Position
+- Solution_66 → Floor / Ceil in Sorted Array
+- Solution_67 → First or Last Occurrence of a Number in Sorted Array
+- Solution_68 → Count Occurrences of a Number in Sorted Array
+- Solution_69 → Search in Rotated Sorted Array I
+- Solution_70 → Search in Rotated Sorted Array II
+- Solution_71 → Find Minimum in Rotated Sorted Array
+- Solution_72 → Find How Many Times Array Is Rotated
+- Solution_73 → Single Element in a Sorted Array
+- Solution_74 → Find Peak Element (1D)
+- Solution_75 → Find Square Root of a Number (Binary Search)
+- Solution_76 → Find Nth Root of a Number Using Binary Search
+- Solution_77 → Koko Eating Bananas
+- Solution_78 → Minimum Days to Make M Bouquets
+- Solution_79 → Find the Smallest Divisor
+- Solution_80 → Capacity to Ship Packages Within D Days
+- Solution_81 → Kth Missing Positive Number
+- Solution_82 → Aggressive Cows
+- Solution_83 → Book Allocation Problem
+- Solution_84 → Split Array – Largest Sum
+- Solution_85 → Painter’s Partition Problem
+- Solution_86 → Minimize Maximum Distance to Gas Station
+- Solution_87 → Median of Two Sorted Arrays
+- Solution_88 → Kth Element of Two Sorted Arrays
+- Solution_89 → Row with Maximum Number of 1’s
+- Solution_90 → Search in a 2D Matrix
+- Solution_91 → Search in a Row and Column Wise Sorted Matrix
+- Solution_92 → Find Peak Element (2D Matrix)
+- Solution_93 → Matrix Median

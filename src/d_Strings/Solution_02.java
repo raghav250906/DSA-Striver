@@ -1,6 +1,26 @@
 package d_Strings;
 
 public class Solution_02 {
+    /*
+     * Question:
+     * Ek string di hui hai, words ka order reverse karna hai.
+     * Extra spaces ignore karni hain.
+     *
+     * Example:
+     * Input  : "welcome to the jungle"
+     * Output : "jungle the to welcome"
+     *
+     * Logic / Approach:
+     * 1. String ko end se traverse karte hain.
+     * 2. Pehle extra spaces skip kar dete hain.
+     * 3. Phir ek word identify karte hain (space aane tak).
+     * 4. Word ko StringBuilder me add karte hain.
+     * 5. Words ke beech sirf ek space add karte hain.
+     *
+     * Time Complexity: O(n)
+     * Space Complexity: O(n)
+     */
+
     public static void main(String[] args) {
         String s ="welcome to the jungle";
         String a =reverseWords(s);

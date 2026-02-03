@@ -1,44 +1,50 @@
 package d_Strings;
 
+import java.util.*;
 public class Solution_12 {
     /*
-    Problem:
-    Longest Palindromic Substring
+     Problem:
+     Count substrings with EXACTLY K distinct characters.
 
-    Idea (Center Expansion Approach):
-    - Har index ko palindrome ka "center" maan ke expand karte hain
-    - 2 cases handle karte hain:
-      1️⃣ Odd length palindrome  -> center ek character (i, i)
-      2️⃣ Even length palindrome -> center do characters ke beech (i, i+1)
-    - Jab tak left aur right characters equal hain, expand karte jao
-    - Har baar max length update karte jao
-   */
-    public String longestPalindrome(String s) {
-        int n = s.length();
-        if (n < 2) return s;
-        int start = 0, maxLen = 1;
-        for (int i = 0; i < n; i++) {
-            int l = i, r = i;
-            while (l >= 0 && r < n && s.charAt(l) == s.charAt(r)) {
-                if (r - l + 1 > maxLen) {
-                    start = l;
-                    maxLen = r - l + 1;
-                }
-                l--;
-                r++;
+     🔥 Trick:
+     Exactly K nikalna difficult hota hai directly.
+
+     Isliye formula use karte hain:
+
+     EXACTLY(k) = atMost(k) - atMost(k-1)
+
+     Example:
+     atMost(3) → substrings having 1,2,3 distinct
+     atMost(2) → substrings having 1,2 distinct
+
+     Subtract → sirf 3 distinct bach gaye ✅
+    */
+
+    // Function to count substrings with at most k distinct characters
+    public static int atMostKDistinct(String s, int k) {
+        int left = 0, res = 0;
+        Map<Character, Integer> freq = new HashMap<>();
+
+        // Iterate with right pointer
+        for (int right = 0; right < s.length(); right++) {
+            freq.put(s.charAt(right), freq.getOrDefault(s.charAt(right), 0) + 1);
+
+            // Shrink window if distinct characters exceed k
+            while (freq.size() > k) {
+                char leftChar = s.charAt(left);
+                freq.put(leftChar, freq.get(leftChar) - 1);
+                if (freq.get(leftChar) == 0) freq.remove(leftChar);
+                left++;
             }
-            l = i;
-            r = i + 1;
-            while (l >= 0 && r < n && s.charAt(l) == s.charAt(r)) {
-                if (r - l + 1 > maxLen) {
-                    start = l;
-                    maxLen = r - l + 1;
-                }
-                l--;
-                r++;
-            }
+
+            // Add count of substrings in current window
+            res += (right - left + 1);
         }
-        return s.substring(start, start + maxLen);
-        }
+        return res;
     }
 
+    // Function to count substrings with exactly k distinct characters
+    public static int countSubstrings(String s, int k) {
+        return atMostKDistinct(s, k) - atMostKDistinct(s, k - 1);
+    }
+}

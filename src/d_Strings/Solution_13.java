@@ -2,43 +2,43 @@ package d_Strings;
 
 public class Solution_13 {
     /*
-     Problem:
-     Beauty Sum of All Substrings
+    Problem:
+    Longest Palindromic Substring
 
-     Beauty of a substring =
-     (maximum frequency of any character)
-       -
-     (minimum frequency of any character, ignoring 0)
-
-     Approach (Brute Force but Optimized):
-     - Har possible substring consider karni hai
-     - Start index i fix karo
-     - End index j ko aage badhate jao
-     - Ek freq[26] array rakho jo current substring ke
-       character counts store kare
-     - Har extension pe:
-         maxFreq aur minFreq (non-zero) nikaalo
-         beauty += (maxFreq - minFreq)
-    */
-
-    public int beautySum(String s) {
+    Idea (Center Expansion Approach):
+    - Har index ko palindrome ka "center" maan ke expand karte hain
+    - 2 cases handle karte hain:
+      1️⃣ Odd length palindrome  -> center ek character (i, i)
+      2️⃣ Even length palindrome -> center do characters ke beech (i, i+1)
+    - Jab tak left aur right characters equal hain, expand karte jao
+    - Har baar max length update karte jao
+   */
+    public String longestPalindrome(String s) {
         int n = s.length();
-        int beauty = 0;
-        for(int i=0;i<n;i++){
-            int[] freq = new int[26];
-            for(int j=i;j<n;j++){
-                freq[s.charAt(j) - 'a']++;
-                int maxFreq = 0;
-                int minFreq = Integer.MAX_VALUE;
-                for(int k=0;k<26;k++){
-                    if(freq[k]>0){
-                        maxFreq = Math.max(maxFreq,freq[k]);
-                        minFreq = Math.min(minFreq,freq[k]);
-                    }
+        if (n < 2) return s;
+        int start = 0, maxLen = 1;
+        for (int i = 0; i < n; i++) {
+            int l = i, r = i;
+            while (l >= 0 && r < n && s.charAt(l) == s.charAt(r)) {
+                if (r - l + 1 > maxLen) {
+                    start = l;
+                    maxLen = r - l + 1;
                 }
-                beauty += (maxFreq - minFreq);
+                l--;
+                r++;
+            }
+            l = i;
+            r = i + 1;
+            while (l >= 0 && r < n && s.charAt(l) == s.charAt(r)) {
+                if (r - l + 1 > maxLen) {
+                    start = l;
+                    maxLen = r - l + 1;
+                }
+                l--;
+                r++;
             }
         }
-        return beauty;
+        return s.substring(start, start + maxLen);
+        }
     }
-}
+

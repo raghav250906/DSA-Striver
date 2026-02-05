@@ -8,7 +8,7 @@
 - Solution_06 → 
 - Solution_07 → 
 - Solution_08 → Middle of a LinkedList [TortoiseHare Method]
-- Solution_09 → 
+- Solution_09 → Reverse Linked List
 - Solution_10 → 
 - Solution_11 → 
 - Solution_12 → 

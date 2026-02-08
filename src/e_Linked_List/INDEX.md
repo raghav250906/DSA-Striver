@@ -8,9 +8,9 @@
 - Solution_06 → 
 - Solution_07 → 
 - Solution_08 → Middle of a LinkedList [TortoiseHare Method]
-- Solution_09 → Reverse Linked List
-- Solution_10 → 
-- Solution_11 → 
+- Solution_09 → Reverse Linked List (Iterative)
+- Solution_10 → Reverse Linked List (Recurrsive)
+- Solution_11 → Detect loop in LL
 - Solution_12 → 
 - Solution_13 → 
 - Solution_14 → 

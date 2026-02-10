@@ -12,5 +12,5 @@
 - Solution_10 → Reverse Linked List (Recurrsive)
 - Solution_11 → Detect loop in LL
 - Solution_12 → Linked List Cycle II
-- Solution_13 → 
-- Solution_14 → 
+- Solution_13 → Length of loop in LL
+- Solution_14 → Palindrome Linked List

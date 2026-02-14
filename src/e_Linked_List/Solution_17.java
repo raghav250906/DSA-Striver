@@ -1,3 +1,28 @@
+/*
+ Delete Middle Node of Linked List
+
+ Edge Case:
+ Agar list me 0 ya 1 node hai → return null.
+
+ Step 1:
+ Slow & Fast pointer se middle find karo.
+ Fast = 2 step
+ Slow = 1 step
+
+ Step 2:
+ Prev pointer maintain karo
+ (jo slow ke just pehle hoga)
+
+ Step 3:
+ Prev.next = slow.next
+ (middle node delete)
+
+ Return head.
+
+ TC: O(N)
+ SC: O(1)
+*/
+
 package e_Linked_List;
 
 public class Solution_17 {

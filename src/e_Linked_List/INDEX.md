@@ -16,3 +16,5 @@
 - Solution_14 → Palindrome Linked List
 - Solution_15 → Odd Even Linked List
 - Solution_16 → Remove Nth Node from End of Linked List
+- Solution_17 → Delete Middle Node of Linked List
+- Solution_18 → Sort LL

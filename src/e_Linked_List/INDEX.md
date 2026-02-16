@@ -19,3 +19,4 @@
 - Solution_17 → Delete Middle Node of Linked List
 - Solution_18 → Sort LL
 - Solution_19 → Sort a Linked List of 0's 1's and 2's
+- Solution_20 →  Intersection of Two Linked Lists

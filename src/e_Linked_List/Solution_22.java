@@ -1,3 +1,29 @@
+/*
+ Add Two Numbers (Linked List)
+
+ Idea:
+ Dono lists ek number represent karti hain.
+ Digit by digit add karna hai (with carry).
+
+ Step 1:
+ Dummy node banao (easy return ke liye).
+
+ Step 2:
+ Jab tak l1, l2 ya carry exist kare:
+    sum = carry
+    Agar l1 hai → sum += l1.val
+    Agar l2 hai → sum += l2.val
+
+    carry = sum / 10
+    new node = sum % 10
+
+ Step 3:
+ Result list return karo (dummy.next)
+
+ TC: O(max(N, M))
+ SC: O(max(N, M))  (new list ban rahi hai)
+*/
+
 package e_Linked_List;
 
 public class Solution_22 {

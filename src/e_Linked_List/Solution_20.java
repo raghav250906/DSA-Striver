@@ -1,3 +1,34 @@
+/*
+ Intersection of Two Linked Lists
+
+ Idea:
+ 2 pointers a & b use karo.
+
+ Step 1:
+ a = headA
+ b = headB
+
+ Step 2:
+ Jab a end par pahunch jaye,
+ usse headB par shift karo.
+
+ Jab b end par pahunch jaye,
+ usse headA par shift karo.
+
+ Isse dono equal distance travel karenge.
+
+ Agar intersection hoga →
+ dono same node par milenge.
+
+ Agar nahi hoga →
+ dono null par milenge.
+
+ Return a (ya b)
+
+ TC: O(N + M)
+ SC: O(1)
+*/
+
 package e_Linked_List;
 
 public class Solution_20 {

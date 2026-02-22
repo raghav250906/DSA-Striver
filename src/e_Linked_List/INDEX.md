@@ -4,8 +4,8 @@
 - Solution_02 → Deletion of the head of LL
 - Solution_03 → Find the length of the Linked List
 - Solution_04 → Search in Linked List
-- Solution_05 → 
-- Solution_06 → 
+- Solution_05 → Insert node before head in Doubly Linked List
+- Solution_06 → Delete head of Doubly Linked List
 - Solution_07 → 
 - Solution_08 → Middle of a LinkedList [TortoiseHare Method]
 - Solution_09 → Reverse Linked List (Iterative)
@@ -21,3 +21,4 @@
 - Solution_19 → Sort a Linked List of 0's 1's and 2's
 - Solution_20 → Intersection of Two Linked Lists
 - Solution_21 → Add one to a number represented by LL
+- Solution_22 → Add two numbers in Linked List

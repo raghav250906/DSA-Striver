@@ -1,3 +1,28 @@
+/*
+ Sort Linked List of 0s, 1s, 2s
+
+ Idea:
+ 3 dummy lists banao:
+ zero list, one list, two list.
+
+ Step 1:
+ Har node ko uski value ke hisaab se
+ 0, 1, ya 2 list me attach karo.
+
+ Step 2:
+ End me tino lists ko connect karo:
+ zero -> one -> two
+
+ Important:
+ Last node ka next null karo
+ (warna cycle ban sakta hai)
+
+ Return zeroHead.next
+
+ TC: O(N)
+ SC: O(1)
+*/
+
 package e_Linked_List;
 
 public class Solution_19 {

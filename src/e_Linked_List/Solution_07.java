@@ -1,9 +1,49 @@
+/*
+ Reverse Doubly Linked List
+
+ Idea:
+ Har node ke next aur prev swap kar do.
+
+ Step 1:
+ curr = head
+
+ Step 2:
+ Har node par:
+    temp = curr.prev
+    curr.prev = curr.next
+    curr.next = temp
+
+ Step 3:
+ curr = curr.prev
+ (kyunki swap ke baad prev hi next ban gaya)
+
+ Step 4:
+ Loop ke baad:
+ head = temp.prev
+ (last processed node new head banega)
+
+ TC: O(N)
+ SC: O(1)
+*/
+
 package e_Linked_List;
 
 public class Solution_07 {
-//    public static ListNode reverseDLL(ListNode head) {
-//        if(head==null) return null;
-//    }
+    public static ListNode reverseDLL(ListNode head) {
+        if(head==null) return null;
+        ListNode temp=null;
+        ListNode curr=head;
+        while(curr!=null){
+            temp=curr.prev;
+            curr.prev=curr.next;
+            curr.next=temp;
+            curr=curr.prev;
+        }
+        if(temp!=null){
+            head=temp.prev;
+        }
+        return head;
+    }
 
     public static void main(String[] args) {
 
@@ -11,8 +51,8 @@ public class Solution_07 {
 
         ListNode head = createList(arr);
         // Test function here
-//        printForward(reverseDLL(head));
-//        printBackward(reverseDLL(head));
+        printForward(reverseDLL(head));
+        printBackward(reverseDLL(head));
     }
 
     static class ListNode {

@@ -6,7 +6,7 @@
 - Solution_04 → Search in Linked List
 - Solution_05 → Insert node before head in Doubly Linked List
 - Solution_06 → Delete head of Doubly Linked List
-- Solution_07 → 
+- Solution_07 → Reverse a Doubly Linked List
 - Solution_08 → Middle of a LinkedList [TortoiseHare Method]
 - Solution_09 → Reverse Linked List (Iterative)
 - Solution_10 → Reverse Linked List (Recurrsive)

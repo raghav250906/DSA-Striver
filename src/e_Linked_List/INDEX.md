@@ -22,3 +22,4 @@
 - Solution_20 → Intersection of Two Linked Lists
 - Solution_21 → Add one to a number represented by LL
 - Solution_22 → Add two numbers in Linked List
+- Solution_23 → Reverse LL in group of given size K

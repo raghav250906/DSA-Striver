@@ -24,3 +24,4 @@
 - Solution_22 → Add two numbers in Linked List
 - Solution_23 → Reverse LL in group of given size K
 - Solution_24 → Rotate a LL
+- Solution_25 → Flattening of LL

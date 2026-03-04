@@ -1,0 +1,26 @@
+## 🔤 Linked_List
+
+- Solution_01 → Insertion at the head of Linked List
+- Solution_02 → Deletion of the head of LL
+- Solution_03 → Find the length of the Linked List
+- Solution_04 → Search in Linked List
+- Solution_05 → Insert node before head in Doubly Linked List
+- Solution_06 → Delete head of Doubly Linked List
+- Solution_07 → Reverse a Doubly Linked List
+- Solution_08 → Middle of a LinkedList [TortoiseHare Method]
+- Solution_09 → Reverse Linked List (Iterative)
+- Solution_10 → Reverse Linked List (Recurrsive)
+- Solution_11 → Detect loop in LL
+- Solution_12 → Linked List Cycle II
+- Solution_13 → Length of loop in LL
+- Solution_14 → Palindrome Linked List
+- Solution_15 → Odd Even Linked List
+- Solution_16 → Remove Nth Node from End of Linked List
+- Solution_17 → Delete Middle Node of Linked List
+- Solution_18 → Sort LL
+- Solution_19 → Sort a Linked List of 0's 1's and 2's
+- Solution_20 → Intersection of Two Linked Lists
+- Solution_21 → Add one to a number represented by LL
+- Solution_22 → Add two numbers in Linked List
+- Solution_23 → Reverse LL in group of given size K
+- Solution_24 → Rotate a LL

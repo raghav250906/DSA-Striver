@@ -23,3 +23,7 @@
 - Solution_21 → Add one to a number represented by LL
 - Solution_22 → Add two numbers in Linked List
 - Solution_23 → Reverse LL in group of given size K
+- Solution_24 → Rotate a LL
+- Solution_25 → Flattening of LL
+- Solution_26 → Clone a LL with random and next pointer
+- Solution_27 → Delete all occurrences of a key in DLL

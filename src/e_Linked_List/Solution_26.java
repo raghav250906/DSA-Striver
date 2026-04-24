@@ -1,3 +1,26 @@
+/*
+Problem: Linked list ka deep copy banana hai
+jisme next + random pointers dono ho.
+
+Logic (3 Step Trick):
+
+1. Clone nodes insert karo:
+   - Har original node ke baad uska copy insert karo.
+   - (A → B) ban jayega (A → A' → B → B')
+
+2. Random pointer set karo:
+   - Agar curr.random != null
+   - To curr.next.random = curr.random.next
+   (kyunki copy node hamesha original ke baad hai)
+
+3. Separate lists:
+   - Original aur copied list ko alag karo.
+   - Next pointers fix karke final deep copy return karo.
+
+Time Complexity: O(N)
+Space Complexity: O(1) (no extra map used)
+*/
+
 package e_Linked_List;
 
 public class Solution_26 {

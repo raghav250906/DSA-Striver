@@ -1,3 +1,29 @@
+/*
+Problem: Multi-level linked list (next + child) ko flatten karke
+ek single sorted list banana hai (child pointer use hoga).
+
+Logic:
+
+1. Base Case:
+   Agar head null hai ya ek hi node hai → already flat.
+
+2. Recursive Approach:
+   - Right side (head.next) ko pehle flatten karo.
+   - mergedHead = flattenLinkedList(head.next)
+
+3. Merge Step:
+   - Current list (head se child wali) ko
+     flattened right list ke saath merge karo.
+   - Merge sorted linked list jaisa (child pointer use hoga).
+
+4. Important:
+   - Merge ke time next pointer = null karna hai
+     kyunki final list sirf child se connected hogi.
+
+Time Complexity: O(N * M) approx
+Space Complexity: O(N) recursion stack
+*/
+
 package e_Linked_List;
 
 public class Solution_25 {

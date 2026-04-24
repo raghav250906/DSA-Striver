@@ -1,58 +1,76 @@
 /*
-Problem: Doubly Linked List me target value ke saare nodes delete karne hain.
+Problem: Sorted Doubly Linked List me aise pairs find karne hain
+jin ka sum = target ho.
 
-Logic:
+Logic (2 Pointer Approach):
 
-1. Traverse karo:
-   - curr pointer se poori list iterate karo.
+1. Initialize pointers:
+   - low = head (start se)
+   - high = last node (end se)
 
-2. Agar curr.data == target:
-   - Case 1: Head node delete ho raha hai
-       → head = curr.next
-       → head.prev = null
+2. Loop jab tak low < high:
+   - sum = low.data + high.data
 
-   - Case 2: Middle/Last node
-       → curr.prev.next = curr.next
-       → agar next exist karta hai:
-            curr.next.prev = curr.prev
+   Case 1: sum == target
+       → pair add karo
+       → low++, high--
 
-3. Har step pe curr = curr.next move karo.
+   Case 2: sum > target
+       → high-- (sum kam karo)
+
+   Case 3: sum < target
+       → low++ (sum badhao)
+
+3. Stop jab pointers cross ho jaye.
 
 Time Complexity: O(N)
-Space Complexity: O(1)
+Space Complexity: O(1) (excluding result list)
 */
 
 package e_Linked_List;
 
-public class Solution_27 {
-    public static ListNode deleteAllOccurrences(ListNode head,int target){
-        ListNode curr = head;
-        while(curr!=null){
-            if(curr.data==target){
-                if(curr.prev==null){
-                    head=curr.next;
-                    if(head!=null){
-                        head.prev=null;
-                    }
-                }
-                else{
-                    curr.prev.next=curr.next;
-                    if(curr.next!=null){
-                        curr.next.prev=curr.prev;
-                    }
-                }
-            }
-            curr=curr.next;
+import java.util.*;
+public class Solution_28 {
+    public static ArrayList<ArrayList<Integer>> findPairsWithGivenSum(int target, ListNode head) {
+
+        ArrayList<ArrayList<Integer>> list = new ArrayList<>();
+
+        if(head == null) return list;
+
+        ListNode low = head;
+        ListNode high = head;
+
+        while(high.next != null){
+            high = high.next;
         }
-        return head;
+
+        while(low != high && high.next != low){
+
+            int sum = low.data + high.data;
+
+            if(sum == target){
+                list.add(new ArrayList<>(Arrays.asList(low.data, high.data)));
+                low = low.next;
+                high = high.prev;
+            }
+            else if(sum > target){
+                high = high.prev;
+            }
+            else{
+                low = low.next;
+            }
+        }
+
+        return list;
     }
+
     public static void main(String[] args) {
 
-        int[] arr = {10, 20, 30,20, 40};
+        int[] arr = {10, 20, 30, 40};
 
         ListNode head = createList(arr);
         // Test function here
-        printForward(deleteAllOccurrences(head,20));
+
     }
 
     static class ListNode {

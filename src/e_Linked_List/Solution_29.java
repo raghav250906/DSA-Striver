@@ -1,58 +1,30 @@
-/*
-Problem: Doubly Linked List me target value ke saare nodes delete karne hain.
-
-Logic:
-
-1. Traverse karo:
-   - curr pointer se poori list iterate karo.
-
-2. Agar curr.data == target:
-   - Case 1: Head node delete ho raha hai
-       → head = curr.next
-       → head.prev = null
-
-   - Case 2: Middle/Last node
-       → curr.prev.next = curr.next
-       → agar next exist karta hai:
-            curr.next.prev = curr.prev
-
-3. Har step pe curr = curr.next move karo.
-
-Time Complexity: O(N)
-Space Complexity: O(1)
-*/
-
 package e_Linked_List;
 
-public class Solution_27 {
-    public static ListNode deleteAllOccurrences(ListNode head,int target){
+public class Solution_29 {
+    ListNode removeDuplicates(ListNode head) {
+        if(head==null) return head;
         ListNode curr = head;
-        while(curr!=null){
-            if(curr.data==target){
-                if(curr.prev==null){
-                    head=curr.next;
-                    if(head!=null){
-                        head.prev=null;
-                    }
-                }
-                else{
-                    curr.prev.next=curr.next;
-                    if(curr.next!=null){
-                        curr.next.prev=curr.prev;
-                    }
+        while(curr!=null && curr.next!=null){
+            if(curr.data==curr.next.data){
+                ListNode delete = curr.next;
+                curr.next=delete.next;
+                if(delete.next!=null){
+                    delete.next.prev=curr;
                 }
             }
-            curr=curr.next;
+            else{
+                curr=curr.next;
+            }
         }
         return head;
     }
     public static void main(String[] args) {
 
-        int[] arr = {10, 20, 30,20, 40};
+        int[] arr = {10, 20, 30, 40};
 
         ListNode head = createList(arr);
         // Test function here
-        printForward(deleteAllOccurrences(head,20));
+
     }
 
     static class ListNode {

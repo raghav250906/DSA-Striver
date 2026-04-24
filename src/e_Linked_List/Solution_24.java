@@ -1,3 +1,29 @@
+/*
+Problem: Linked List ko right side me k times rotate karna hai.
+
+Logic:
+
+1. Edge Case:
+   - Agar list empty hai ya single node hai → return head.
+
+2. Length Find:
+   - Puri list traverse karke length nikalte hain.
+   - Last node ko head se connect karke circular list bana dete hain.
+
+3. Effective Rotation:
+   - k = k % length (extra rotations avoid karne ke liye)
+
+4. New Tail Find:
+   - New tail = (length - k)th node
+   - Uske next wala node new head banega
+
+5. Break Circle:
+   - newTail.next = null → circular list ko tod dete hain
+
+Time Complexity: O(N)
+Space Complexity: O(1)
+*/
+
 package e_Linked_List;
 
 public class Solution_24 {

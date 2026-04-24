@@ -7,7 +7,7 @@
 - Solution_05 → Insert node before head in Doubly Linked List
 - Solution_06 → Delete head of Doubly Linked List
 - Solution_07 → Reverse a Doubly Linked List
-- Solution_08 → Middle of a LinkedList [TortoiseHare Method]
+- Solution_08 → Middle of a LinkedList (TortoiseHare Method)
 - Solution_09 → Reverse Linked List (Iterative)
 - Solution_10 → Reverse Linked List (Recurrsive)
 - Solution_11 → Detect loop in LL
@@ -27,3 +27,5 @@
 - Solution_25 → Flattening of LL
 - Solution_26 → Clone a LL with random and next pointer
 - Solution_27 → Delete all occurrences of a key in DLL
+- Solution_28 → Find Pairs With Given Sum
+- Solution_29 → Remove Duplicates

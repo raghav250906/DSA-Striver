@@ -39,7 +39,6 @@ public class Solution_04 {
         long oddPos= n/2;
         long even = fastPow(5,evenPos);
         long odd = fastPow(4,oddPos);
-        System.out.print(even+" "+odd);
         return (int) ((even*odd) % MOD);
     }
     static long fastPow(long n,long pow){

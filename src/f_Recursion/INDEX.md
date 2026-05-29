@@ -12,3 +12,5 @@
 - Solution_10 → Count all subsequences with sum K
 - Solution_11 → Check if there exists a subsequence with sum K
 - Solution_12 → Letter Combinations of a Phone Number
+- Solution_13 → Palindrome Partitioning
+- Solution_14 → Word Search

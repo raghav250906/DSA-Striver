@@ -14,3 +14,5 @@
 - Solution_12 → Letter Combinations of a Phone Number
 - Solution_13 → Palindrome Partitioning
 - Solution_14 → Word Search
+- Solution_15 → N-Queens
+- Solution_16 → 

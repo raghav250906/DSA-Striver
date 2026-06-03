@@ -11,8 +11,8 @@
 - Solution_09 → Power Set Bit Manipulation
 - Solution_10 → XOR of numbers in a given range
 - Solution_11 → Single Number - III
-- Solution_12 → 
-- Solution_13 → 
+- Solution_12 → Divide two numbers without multiplication and division
+- Solution_13 → Divisors of a Number
 - Solution_14 → 
 - Solution_15 → 
 - Solution_16 → 

@@ -13,6 +13,7 @@
 - Solution_11 → Trapping Rainwater
 - Solution_12 → Asteroid Collision
 - Solution_13 → Sum of Subarray Minimums
-- Solution_14 → 
-- Solution_15 → 
-- Solution_16 → 
+- Solution_14 → Sum of Subarray Ranges
+- Solution_15 → Remove K Digits
+- Solution_16 → Largest rectangle in a histogram
+- Solution_17 → Maximum Rectangles
